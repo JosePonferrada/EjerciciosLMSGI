@@ -1,0 +1,12 @@
+<!ELEMENT videoclub ANY>
+<!ELEMENT peliculas (#PCDATA)>
+<!ELEMENT pelicula (#PCDATA)>
+<!ELEMENT juegos (#PCDATA)>
+<!ELEMENT chucherias (#PCDATA)>
+<!ELEMENT peliculas (#PCDATA)>
+<!ELEMENT peliculas (#PCDATA)>
+<!ELEMENT peliculas (#PCDATA)>
+
+<!ATTLIST videoclub dirección CDATA #IMPLIED
+                    nombre CDATA #REQUIRED
+                    telefono CDATA #FIXED "957525112">       
