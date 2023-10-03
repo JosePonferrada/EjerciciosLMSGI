@@ -1,12 +1,22 @@
 <!ELEMENT videoclub ANY>
-<!ELEMENT peliculas (#PCDATA)>
-<!ELEMENT pelicula (#PCDATA)>
-<!ELEMENT juegos (#PCDATA)>
-<!ELEMENT chucherias (#PCDATA)>
-<!ELEMENT peliculas (#PCDATA)>
-<!ELEMENT peliculas (#PCDATA)>
-<!ELEMENT peliculas (#PCDATA)>
+<!ELEMENT articulos (peliculas | juegos)*>
+<!ELEMENT peliculas (#PCDATA | pelicula)*>
+<!ELEMENT pelicula (titulo, genero, estreno?, (disponible | alquilada))>
+<!ELEMENT juegos (juego, (disponible | alquilada))+>
+<!ELEMENT juego ANY>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT estreno (#PCDATA)>
+<!ELEMENT disponible EMPTY>
+<!ELEMENT alquilada EMPTY>
 
-<!ATTLIST videoclub dirección CDATA #IMPLIED
+
+<!ATTLIST videoclub direccion CDATA #IMPLIED
                     nombre CDATA #REQUIRED
-                    telefono CDATA #FIXED "957525112">       
+                    telefono CDATA #FIXED "957525112">
+<!ATTLIST pelicula codigo ID #REQUIRED>
+                                    
+<!ATTLIST articulos codigo ID #REQUIRED>
+<!ENTITY top "¡TOP ESTA SEMANA!">
+<!ENTITY % atributoCoste "coste CDATA #IMPLIED">
+<!ATTLIST pelicula %atributoCoste;>     
