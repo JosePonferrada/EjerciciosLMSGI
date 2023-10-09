@@ -1,0 +1,6 @@
+<!ELEMENT f1 (granPremio)+>
+<!ELEMENT granPremio ANY>
+<!ELEMENT circuito (localizacion)>
+<!ELEMENT localizacion (#PCDATA)>
+<!ELEMENT escuderias (pilotos+)>
+<!ELEMENT pilotos (piloto1, piloto2)>

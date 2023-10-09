@@ -9,12 +9,14 @@
 <!ELEMENT estreno (#PCDATA)>
 <!ELEMENT disponible EMPTY>
 <!ELEMENT alquilada EMPTY>
-
+<!ELEMENT codigoPelicula ANY>
 
 <!ATTLIST videoclub direccion CDATA #IMPLIED
                     nombre CDATA #REQUIRED
                     telefono CDATA #FIXED "957525112">
 <!ATTLIST pelicula codigo ID #REQUIRED>
+<!ATTLIST pelicula codigoPelicula IDREF #REQUIRED
+                    ofertaPelicula IDREFS #IMPLIED>
                                     
 <!ATTLIST articulos codigo ID #REQUIRED>
 <!ENTITY top "¡TOP ESTA SEMANA!">

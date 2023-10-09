@@ -1,0 +1,20 @@
+<!ELEMENT zoologico (zona+, animal*, espectaculo?)>
+<!ELEMENT zona (#PCDATA | numeroRecintos)*>
+<!ELEMENT animal (nombre, especie, ( terrestre | acuatico))>
+<!ELEMENT espectaculo EMPTY>
+<!ELEMENT numeroRecintos (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT especie (#PCDATA)>
+<!ELEMENT terrestre (#PCDATA)>
+<!ELEMENT acuatico (#PCDATA)>
+<!ENTITY % attNombre "nombre CDATA #REQUIRED">
+
+<!ATTLIST zoologico %attNombre;
+                    ciudad (Fuengirola | Córdoba | Valencia) "Fuengirola"
+                    webVentaEntradas CDATA #FIXED "www.entradas.com"
+                    empresaTransporte CDATA #IMPLIED>
+<!ATTLIST zona nombre ID #IMPLIED>
+<!ATTLIST animal zona IDREF #IMPLIED>
+<!ATTLIST espectaculo zonas IDREFS #IMPLIED
+                        nombre CDATA #IMPLIED>
+<!ENTITY bioparc "Zoológicos Bioparc S.L.">

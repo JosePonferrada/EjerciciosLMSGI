@@ -2,13 +2,13 @@
 <!DOCTYPE videoclub SYSTEM "videoclub.dtd">
 <videoclub direccion="Parque Europa" nombre="El Perro Loco" telefono="957525112">
     <peliculas> 
-        <pelicula codigo="pel001" coste="5"> 
+        <pelicula codigoPelicula="pel001" coste="5"> 
             <titulo>La milla verde</titulo>
             <genero>Drama/Crimen</genero>
             <estreno/>
             <disponible/>
         </pelicula>
-        <pelicula codigo="pel033">
+        <pelicula codigoPelicula="pel033">
             <titulo></titulo>
             <genero></genero>
             <alquilada/>

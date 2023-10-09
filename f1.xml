@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE f1 SYSTEM "f1.dtd">
+<f1>
+    <granPremio>
+        <circuito nombre="">
+            <localizacion ciudad="">
+
+            </localizacion>
+        </circuito>
+
+        <circuito>
+            <localizacion>
+
+            </localizacion>
+        </circuito>
+
+
+    </granPremio>
+
+
+
+
+
+</f1>
