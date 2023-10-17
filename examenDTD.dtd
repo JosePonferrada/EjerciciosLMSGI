@@ -1,0 +1,19 @@
+<!ELEMENT exposiciones (#PCDATA | exposicion)*>
+<!ELEMENT exposicion (fecha, obra+, artista?, (vivo | muerto)?)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT obra (#PCDATA)>
+<!ELEMENT artista (#PCDATA)>
+<!ELEMENT vivo EMPTY>
+<!ELEMENT muerto (#PCDATA)>
+<!ENTITY % attNombre "nombre CDATA #REQUIRED">
+
+<!ATTLIST exposiciones %attNombre;
+                    ciudad (Fuengirola | Córdoba | Valencia) "Fuengirola"
+                    webVentaEntradas CDATA #FIXED "www.entradas.com"
+                    empresaViajes CDATA #IMPLIED>
+
+<!ATTLIST obra nombre ID #IMPLIED>
+<!ATTLIST artista obraRealizada IDREF #IMPLIED>
+<!ATTLIST exposicion obras IDREFS #IMPLIED
+                    nombre CDATA #IMPLIED>
+<!ENTITY oferta "El precio de esta entrada está rebajado a la mitad.">

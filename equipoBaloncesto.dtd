@@ -1,0 +1,24 @@
+<!ELEMENT equipoBaloncesto (entrenador, jugador+)>
+<!ELEMENT entrenador (nombreEntrenador, edad)>
+<!ELEMENT jugador (nombreJugador, numeroDorsal, (rookie | veterano)?)>
+<!ELEMENT nombreEntrenador (#PCDATA)>
+<!ELEMENT edad (#PCDATA | fechaNacimiento)*>
+<!ELEMENT fechaNacimiento (#PCDATA)>
+<!ELEMENT nombreJugador (#PCDATA)>
+<!ELEMENT numeroDorsal (#PCDATA)>
+<!ELEMENT rookie EMPTY>
+<!ELEMENT veterano EMPTY>
+
+<!ATTLIST equipoBaloncesto nombreEquipo CDATA #REQUIRED
+                            ciudad CDATA #FIXED "Wayhaven City"
+                            codigoMiembrosEquipo IDREFS #IMPLIED>
+<!ATTLIST entrenador codigo ID #REQUIRED
+                        titulosGanados CDATA #IMPLIED>
+<!ATTLIST jugador posicion (base | escolta | alero | ala-pivot | pivot) "base"
+                    codigo ID #REQUIRED
+                    codigoEntrenador IDREF #IMPLIED>
+
+<!ENTITY alias "-Ricky-">
+<!ENTITY % atributoAltura "altura CDATA #IMPLIED">
+<!ATTLIST jugador %atributoAltura;>
+<!ATTLIST entrenador %atributoAltura;>

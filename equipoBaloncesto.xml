@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipoBaloncesto SYSTEM "equipoBaloncesto.dtd">
+<equipoBaloncesto nombreEquipo="Wayhaven Warriors" ciudad="Wayhaven City"
+codigoMiembrosEquipo="RicGom MarJor FerVil">
+
+    <entrenador codigo="RicGom" titulosGanados="3" altura="195">
+        <nombreEntrenador>Ricardo &alias; Gómez Smith</nombreEntrenador>
+        <edad>42
+            <fechaNacimiento>17/09/1981</fechaNacimiento>
+        </edad>
+    </entrenador>
+
+    <jugador codigo="MarJor" codigoEntrenador="RicGom" posicion="base" altura="203">
+        <nombreJugador>Marcus Jordan</nombreJugador>
+        <numeroDorsal>97</numeroDorsal>
+        <rookie/>
+    </jugador>
+
+    <jugador codigo="FerVil" codigoEntrenador="RicGom" posicion="ala-pivot" altura="211">
+        <nombreJugador>Fernando Villanova</nombreJugador>
+        <numeroDorsal>21</numeroDorsal>
+    </jugador>
+
+</equipoBaloncesto>
