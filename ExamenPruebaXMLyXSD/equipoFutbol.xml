@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipoFutbol xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="equipoFutbol.xsd" nombreEquipo="Los Halcones">
+Este es mi equipo
+<jugadores>
+    <jugador nombre="James Dell" posicion="LI" edad="19"/>
+    <jugador nombre="Pope Carter" posicion="POR" edad="26"/>
+    <jugador nombre="Michael Scott" posicion="DC" edad="23"/>
+</jugadores>
+<coachs>
+    <coachPrimero nombre="Lucas Sheffield"/>
+    <ayudantes número="5"/>
+</coachs>
+
+
+
+</equipoFutbol>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="equipoFutbol" type="tipoEquipoFutbol"/>
+
+<xs:complexType name="tipoEquipoFutbol" mixed="true">
+    <xs:sequence>
+        <xs:element name="jugadores" type="xs:string"  maxOccurs="unbounded"/>
+        <xs:element name="coachs" minOccurs="1" maxOccurs="3"/>
+    </xs:sequence>
+    <xs:attribute name="nombreEquipo" type="xs:string"/>
+</xs:complexType>
+
+<xs:complexType name="jugador">
+    <xs:attribute name="nombre" type="xs:string"/>
+    <xs:attribute name="posicion" type="xs:string"/>
+    <xs:attribute name="edad" type="xs:positiveInteger"/>
+</xs:complexType>
+
+<xs:complexType name="coachPrimero">
+    <xs:attribute name="nombre" type="xs:string" />
+</xs:complexType>
+
+</xs:schema>
