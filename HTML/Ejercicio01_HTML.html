@@ -14,6 +14,10 @@
 			font-family: 'Roboto', sans-serif;
 			font-size: 11pt;
 			color: #FFFFFF;
+			margin-left: 45px;
+			margin-top: 50px;
+			margin-bottom: 30px;
+			margin-right: 40px;
 		}
 		h1 {
 			color: #eaab64;
@@ -30,28 +34,58 @@
         p{
 			line-height: 1.5em;
 		}
+		table, th, td, tr{
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 15px;
+			text-align: left;
+		}
 		th{
+			background-color: #7c7c7d;
+			color: black;
+		}
+		img{
+			width: 25%;
+		}
+		img:hover{
+			scale: 1.1;
+			opacity: 0.8;
+		}
+		.parrafoEncimaTabla{
 			text-align: center;
+			margin-bottom: 0%;
+		}
+		.electronicosWithBG{
+			background-color: #eadd64;
+			border-radius: 5px;
+			padding: 10px;
+		}
+		caption{
+			margin-top: 10px;
+		}
+		ul li{
+			list-style-type: square;
+			color: darkviolet;
 		}
 	</style>
 </head>
 <body>
 	<h1>¡Ofertas de Black Friday!</h1>
-    <p class="parrafoNormal">Bienvenidos a nuestra página de ofertas especiales para el Black Friday. Descubre descuentos increíbles en una variedad de productos.</p>
+    <p>Bienvenidos a nuestra página de ofertas especiales para el Black Friday. Descubre descuentos increíbles en una variedad de productos.</p>
 	
     <h2 class="electronicos">Electrónicos</h2>
-    <p class="parrafoNormal">Encuentra las mejores ofertas en electrónicos para este Black Friday.</p>
+    <p>Encuentra las mejores ofertas en electrónicos para este Black Friday.</p>
 	
     <h3>Teléfonos inteligentes</h3>
-    <p class="parrafoNormal">Descubre descuentos exclusivos en los últimos modelos de teléfonos inteligentes.</p>
+    <p>Descubre descuentos exclusivos en los últimos modelos de teléfonos inteligentes.</p>
 
 	<h2>Ropa y Accesorios</h2>
-    <p class="parrafoNormal">Renueva tu armario con nuestras increíbles ofertas en ropa y accesorios de moda.</p>
+    <p>Renueva tu armario con nuestras increíbles ofertas en ropa y accesorios de moda.</p>
     
 	<hr />
 
     <h2>Ofertas destacadas</h2>
-	<p class="parrafoNormal">Descubre nuestras ofertas en electrónicos y tecnología avanzada.</p>
+	<p>Descubre nuestras ofertas en electrónicos y tecnología avanzada.</p>
 	<ul>
 		<li>
 			<a href="#electronicos">Electrónicos</a>
@@ -61,22 +95,46 @@
 		</li>
 	</ul>
 
-    
-    <h2>Electrónicos</h2>
-	<img src="https://serviciostecnicosmovil.com/wp-content/uploads/2019/09/electronica.jpg" width="25%"/>
+	<a name="electronicos"></a>
+    <h2 class="electronicosWithBG">Electrónicos</h2>
+	<a href="https://www.pccomponentes.com/" target="_blank">
+		<img src="https://serviciostecnicosmovil.com/wp-content/uploads/2019/09/electronica.jpg" alt="Imagen con objetos electrónicos"/>
+	</a>
 
     <h3>Tabletas</h3>
-    <p class="parrafoNormal">¡Aprovecha los descuentos en las últimas tabletas!</p>
+    <p>¡Aprovecha los descuentos en las últimas tabletas!</p>
 
 
     <h3>Teléfonos inteligentes</h3>
+	<p>Los mejores modelos de teléfonos inteligentes a precios irresistibles.</p>
 
 	<a name="ropaYAcc"></a>
     <h2>Ropa y Accesorios</h2>
-    <p class="parrafoNormal">Actualiza tu estilo con nuestras ofertas en ropa y accesorios de moda.</p>
-	<img src="https://previews.123rf.com/images/margolana/margolana1512/margolana151200036/49449507-ropa-y-accesorios-iconos-de-%C3%A9poca-plano-del-color-del-icono-de-la-moda-del-bolso-de-iconos-de.jpg" width="25%"/>
-	<table>
-		
+    <p>Actualiza tu estilo con nuestras ofertas en ropa y accesorios de moda.</p>
+	<a href="https://www.stradivarius.com/" target="_blank">
+		<img src="https://previews.123rf.com/images/margolana/margolana1512/margolana151200036/49449507-ropa-y-accesorios-iconos-de-%C3%A9poca-plano-del-color-del-icono-de-la-moda-del-bolso-de-iconos-de.jpg" alt="Imagen con prendas de ropa variada"/>
+	</a>
+	
+	<table width="100%" >
+		<caption>Ofertas destacadas</caption>
+		<tr>	<!--Headers-->
+			<th>Producto</th>
+			<th colspan="2">Descuento</th>
+		</tr>
+		<tr> <!--Fila-->
+			<td rowspan="2">Camisas</td> 
+			<td>30%</td>
+			<td>¡Solo por hoy!</td>
+		</tr>
+		<tr>
+			<td colspan="2">Variedad de colores y tallas disponibles</td>
+		</tr>
+		<tr>
+			<td>Zapatos</td>
+			<td>20%</td>
+			<td>¡Compra 2 pares y obtén un 10% adicional!</td>
+		</tr>
 	</table>
+	<p>Estas son solo algunas de las ofertas que tenemos para ti. ¡No te pierdas nuestras increíbles promociones!</p>
 </body>
 </html>
