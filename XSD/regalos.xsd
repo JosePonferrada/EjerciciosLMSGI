@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tiendas" type="tipoTiendas"></xs:element>    
+
+    <xs:complexType name="tipoTiendas">
+    <xs:sequence> <!-- El sequence nos permite colocar a los elementos que declaremos en un determinado orden, admite cardinalidad -->
+      <xs:element name="tienda" type="tipoTienda" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tipoTienda" mixed="true">
+    <xs:all> <!-- Declaramos unos elementos que pueden aparecer máximo una vez y en cualquier orden-->
+      <xs:element name="nombre" type="textoNoVacio"/> 
+      <xs:element name="regalos" /> 
+    </xs:all>
+    <xs:attribute name="cif" type="xs:string"/>
+    <xs:attribute name="descuentosAplicables" type="tipoDescuentos"/>
+  </xs:complexType>
+
+   <xs:simpleType name="textoNoVacio">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tipoRegalos">
+    <xs:all>
+      <xs:element name="regalo">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="url" type="tipoPatronUrl">
+                        </xs:element>
+                        <xs:element name="marca" type="tipoMarca"/>
+                    </xs:sequence>
+                    <xs:attribute name="codigo" type="tipoPatronCodigo"/>
+                    <xs:attribute name="precio" type="tipoPrecio"/>
+                    <xs:attribute name="iva" type="tipoIva"/>
+                    <xs:attribute name="descuento" type="tipoDescuentos"/>
+                </xs:complexType> 
+            </xs:element> 
+      <xs:element name="bombazo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="url" type="tipoPatronUrl"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="tipoPatronCodigo"/>
+        </xs:complexType>
+      </xs:element>    
+    </xs:all>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoPatronCodigo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="((\d{3}|\w{3})(\d{3}|\w{3})(\d{3}|\w{3}))" />
+    </xs:restriction>  
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoPatronUrl">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([http]\w+[.](com|es))" />
+    </xs:restriction>  
+  </xs:simpleType>
+
+
+  <xs:complexType name="tipoVacio"/> <!-- Para elemento vacío-->
+
+  <xs:complexType name="tipoMarca">
+    <xs:choice> <!-- Choice nos permite elegir como su nombre indica entre uno de los elementos que hemos declarado. Solo pueden aparecer una vez-->
+        <xs:element name="mattel" type="tipoVacio"/>
+        <xs:element name="giochiPreziosi" type="tipoVacio"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoDescuentos">
+    <xs:list itemType="listaDescuentos" />
+  </xs:simpleType>
+
+  <xs:simpleType name="listaDescuentos">
+        <xs:union memberTypes="listaDescuentosBajos listaDescuentosMedios"/>
+    </xs:simpleType>
+
+  <xs:simpleType name="listaDescuentosBajos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="15%"/>
+      <xs:enumeration value="10%"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="listaDescuentosMedios">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="25%"/>
+      <xs:enumeration value="20%"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoPrecio">
+    <xs:restriction base="xs:float">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="10000"></xs:maxInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipoIva">
+    <xs:restriction base="tipoPrecio">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="50" />
+    </xs:restriction>  
+  </xs:simpleType>
+  
+</xs:schema>

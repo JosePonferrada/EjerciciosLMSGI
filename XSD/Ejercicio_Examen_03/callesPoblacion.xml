@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<callesPoblacion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="callesPoblacion.xsd" poblacion="Puente Ebro" num_habitantes="30000"
+prefijoTelefono="+34 98460">
+Características de algunas calles.
+    <calle nombre="Alfonso V" edificios="tienda_24h casas tienda_ropa">
+        <fundacion anio="1923" />
+        <longitud unidades="metros">100</longitud>
+        <estado>
+            <renovada empresa="Construcciones Marcos" anio="2022" />
+        </estado>
+    </calle>
+
+    <calle nombre="Reyes Católicos" edificios="apartamentos restaurante">
+        <fundacion anio="1977" />
+        <longitud unidades="metros">300</longitud>
+        <estado>
+            <renovada empresa="Construcciones Jiménez S.A." anio="2017" />
+        </estado>
+    </calle>
+
+    <calle nombre="Santa Lucía" edificios="tienda_electrónica casas apartamentos">
+        <fundacion anio="1954" />
+        <longitud unidades="metros">500</longitud>
+        <estado>
+            <obras />
+        </estado>
+    </calle>
+
+</callesPoblacion>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<equipoBaloncesto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="equipoBaloncesto.xsd" nombreEquipo="Sultans" >
+  Composición del equipo principal de baloncesto
+
+  <entrenador nombre="John Smith" edad="50" dni="98765432E" nacionalidad="Argentina" />
+
+  <jugador nombre="James Cousins" edad="26" posicion="Pivot Ala-pivot" nacionalidad="Estadounidense" />
+  <jugador nombre="David Pérez" edad="20" posicion="Escolta Alero" nacionalidad="Española" />
+  <jugador nombre="Michael Renner" edad="29" posicion="Alero Ala-pivot" nacionalidad="Británica" />
+  <jugador nombre="Carlos Presley" edad="30" posicion="Ala-pivot Pivot" nacionalidad="Canadiense" />
+  <jugador nombre="Javier Gregovich" edad="19" posicion="Base" nacionalidad="Rusa" />
+
+  <equipoMedico>
+
+    <medico nombre="Jaime Becerra" edad="39" nacionalidad="Argentina" formacion="Medicina y Fisioterapia" >
+        <veterano/>
+    </medico>
+    <asistentes formacion="Primeros auxilios" >2</asistentes>
+
+  </equipoMedico>
+
+</equipoBaloncesto>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="callesPoblacion" type="tipoCallesPoblacion" />
+
+    <!-- Elemento mixto con contenido texto y atributos-->
+    <xs:complexType name="tipoCallesPoblacion" mixed="true">
+        <xs:sequence>
+            <xs:element name="calle" type="tipoCalle" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="poblacion" type="xs:string" />
+        <xs:attribute name="num_habitantes" type="xs:positiveInteger" />
+        <xs:attribute name="prefijoTelefono" type="tipoPrefijoTelefono" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoCalle">
+        <xs:all>
+            <xs:element name="fundacion" type="tipoFundacion" maxOccurs="1"/>
+            <xs:element name="longitud" type="tipoLongitud" maxOccurs="1" />
+            <xs:element name="estado" type="tipoEstado" maxOccurs="1" />
+        </xs:all>
+        <xs:attribute name="nombre" type="tipoNombre" />
+        <xs:attribute name="edificios" type="lista_edificios" />
+    </xs:complexType>
+
+    <!-- Atributo que toma su valor de una lista de valores-->
+    <xs:simpleType name="tipoNombre">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Alfonso V" />
+            <xs:enumeration value="Santa Lucía" />
+            <xs:enumeration value="Javier Capitán" />
+            <xs:enumeration value="Reyes Católicos" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elemento con atributos y contenido numérico-->
+    <xs:complexType name="tipoLongitud">
+        <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute name="unidades" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="tipoFundacion">
+        <xs:attribute name="anio" type="anio_1900_2050" />
+    </xs:complexType>
+
+    <!-- Atributo cuyo valor está contenido entre intervalos numericos-->
+    <xs:simpleType name="anio_1500_3000">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1500" />
+            <xs:maxInclusive value="3000" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo de datos simple derivado de otro simple-->
+    <xs:simpleType name="anio_1900_2050">
+        <xs:restriction base="anio_1500_3000">
+            <xs:minInclusive value="1900" />
+            <xs:maxInclusive value="2050" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipoEstado">
+        <xs:choice>
+            <xs:element name="renovada" type="tipoRenovadaDerivado" />
+            <xs:element name="obras" type="tipoVacio" />
+        </xs:choice>
+    </xs:complexType>
+
+    <!-- Tipo de datos complejo derivado de otro complejo-->
+    <xs:complexType name="tipoRenovadaDerivado">
+        <xs:complexContent>
+            <xs:extension base="tipoFundacion">
+                <xs:attribute name="empresa" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="localesCalle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="restaurante" />
+            <xs:enumeration value="tienda_24h" />
+            <xs:enumeration value="tienda_electrónica" />
+            <xs:enumeration value="tienda_ropa" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="viviendasCalle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="apartamentos" />
+            <xs:enumeration value="casas" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo dato simple usando xs:union-->
+    <xs:simpleType name="edificiosCalle">
+        <xs:union memberTypes="viviendasCalle localesCalle" />
+    </xs:simpleType>
+
+    <!-- Tipo dato simple usando xs:list-->
+    <xs:simpleType name="lista_edificios">
+        <xs:list itemType="edificiosCalle" />
+    </xs:simpleType>
+
+    <!-- Tipo simple con expresiones regulares-->
+    <xs:simpleType name="tipoPrefijoTelefono">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[+]34\s\d{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elemento vacío externo-->
+    <xs:complexType name="tipoVacio" />
+
+</xs:schema>

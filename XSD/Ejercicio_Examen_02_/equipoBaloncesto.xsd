@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="equipoBaloncesto" type="tipoEquipoBaloncesto" />
+
+    <!-- Elemento mixto(texto y sub-elementos)-->
+    <xs:complexType name="tipoEquipoBaloncesto" mixed="true">
+        <xs:sequence>
+            <xs:element name="entrenador" type="tipoEntrenador" minOccurs="1" maxOccurs="1" />
+            <xs:element name="jugador" type="tipoJugador" minOccurs="1" maxOccurs="5" />
+            <xs:element name="equipoMedico" type="tipoEquipoMedico" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+        <!-- Elemento con atributos y contenido texto (dado que es mixto)-->
+        <xs:attribute name="nombreEquipo" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoEntrenador">
+        <xs:attribute name="nombre" type="xs:string" />
+        <xs:attribute name="edad" type="numero_18-100" />
+        <xs:attribute name="dni" type="tipoDni" />
+        <xs:attribute name="nacionalidad" type="tipoNacionalidad" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoJugador">
+        <xs:attribute name="nombre" type="xs:string" />
+        <xs:attribute name="edad" type="numero_18-40" />
+        <xs:attribute name="posicion" type="tipoPosiciones" />
+        <xs:attribute name="nacionalidad" type="tipoNacionalidad" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoEquipoMedico">
+        <xs:all>
+            <xs:element name="medico" type="tipoMedicoDerivado" />
+            <xs:element name="asistentes" type="tipoAsistentes" />
+        </xs:all>
+    </xs:complexType>
+
+    <!-- Elemento con atributos y contenido numérico-->
+    <xs:complexType name="tipoAsistentes">
+        <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute name="formacion" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- Atributo que toma su valor de una lista de valores-->
+    <xs:simpleType name="tipoPosicion">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Base" />
+            <xs:enumeration value="Escolta" />
+            <xs:enumeration value="Alero" />
+            <xs:enumeration value="Pivot" />
+            <xs:enumeration value="Ala-pivot" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo simple usando xs:list-->
+    <xs:simpleType name="tipoPosiciones">
+        <xs:list itemType="tipoPosicion" />
+    </xs:simpleType>
+
+    <!-- Atributo cuyo valor contenido entre intervalo numerico-->
+    <xs:simpleType name="numero_18-100">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="18" />
+            <xs:maxInclusive value="100" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo de datos simple derivado de otro simple-->
+    <xs:simpleType name="numero_18-40">
+        <xs:restriction base="numero_18-100">
+            <xs:minInclusive value="18" />
+            <xs:maxInclusive value="40" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo simple con expresiones regulares-->
+    <xs:simpleType name="tipoDni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{8}([A-Z]|[a-z])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nacionalidadEuropea">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Española" />
+            <xs:enumeration value="Rusa" />
+            <xs:enumeration value="Británica" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nacionalidadAmericana">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Estadounidense" />
+            <xs:enumeration value="Canadiense" />
+            <xs:enumeration value="Argentina" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo dato simple usando xs:union-->
+    <xs:simpleType name="tipoNacionalidad">
+        <xs:union memberTypes="nacionalidadEuropea nacionalidadAmericana" />
+    </xs:simpleType>
+
+    <!-- Tipo de datos complejo derivado de otro complejo-->
+    <xs:complexType name="tipoMedicoDerivado">
+        <xs:complexContent>
+            <xs:extension base="tipoEntrenador">
+                <xs:choice>
+                    <xs:element name="veterano" type="tipoVacio" />
+                    <xs:element name="aprendiz" type="tipoVacio" />
+                </xs:choice>
+                <xs:attribute name="formacion" type="xs:string" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Elemento vacío externo-->
+    <xs:complexType name="tipoVacio" />
+
+</xs:schema>
