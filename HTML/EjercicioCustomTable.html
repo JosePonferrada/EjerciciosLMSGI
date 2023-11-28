@@ -8,29 +8,73 @@
         <meta name="author" content="Jose Manuel Ponferrada">
         <style type="text/css">
             p{
+                margin: 15px;
                 font-family: fantasy;
                 font-size: larger;
             }
-            table{
-                border: 1px black;
-                border-collapse: collapse;
+            table, th, td, tr{
+                padding: 12px;
                 width: 100%;
+            }
+            th{
+                border: 3px solid black;
+                background-color: cadetblue;
+                border-radius: 12px;
+                margin: 3px;
+            }
+            img{
+              height:250px;              
+            }
+            img:hover{
+                opacity: 0.2;    
+            }
+            th:hover{
+                background-color: rgb(9, 126, 132);
+                column-rule-color:bisque ;
             }
         </style>
     </head>
     <body>
         <p>Superheroes de DC</p>
         <table>
-            <tr>
-                <th>Superheroe</th>
-                <th>Poderes</th>
-                <th>Imagen</th>
-                <th>Biografía</th>
-            </tr>
-            <tr>
-                <td rowspan="2">Batman</td>
-                <td></td>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>Superheroe</th>
+                    <th>Poderes</th>
+                    <th>Imagen</th>
+                    <th>Biografía</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Batman</td>
+                    <td>Inteligencia, habilidades de detective, habilidades marciales</td>
+                    <td rowspan="2"><img src="https://hbomax-images.warnermediacdn.com/2022-04/batman_over_0.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt="Una imagen de Batman"></td>
+                    <td>Más sobre Batman</td>
+                </tr>
+                <tr>
+                    <td>Alias: El Caballero Oscuro</td>
+                </tr>
+                <tr>
+                    <td>Superman</td>
+                    <td>Vuelo, super fuerza, visión de rayos X</td>
+                    <td><img src="https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg" alt="Una imagen de Superman"></td>
+                    <td>Más sobre Superman</td>
+                </tr>
+                <tr>
+                    <td>Wonder Woman</td>
+                    <td>Fuerza sobrehumana, habilidades de lucha, lazos de la verdad</td>
+                    <td><img src="https://www.mubis.es/media/users/12828/318751/gal-gadot-confirma-el-desarrollo-de-una-nueva-pelicula-de-wonder-woman-original.jpg" alt="Una imagen de Wonder Woman"></td>
+                    <td>Más sobre Wonder Woman</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Flash</td>
+                    <td>Velocidad sobrehumana, curvatura del tiempo</td>
+                    <td rowspan="2"><img src="https://www.mundodeportivo.com/alfabeta/hero/2023/06/captura-de-pantalla-2023-06-06-175608.png" alt="Una imagen de Flash"></td>
+                    <td>Más sobre Flash</td>
+                </tr>
+                <tr>
+                    <td>Miembro de la Liga de la Justicia</td>
+                </tr>
+            </tbody>
         </table>
         
     </body>
