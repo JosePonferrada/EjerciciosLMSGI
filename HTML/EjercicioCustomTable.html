@@ -9,17 +9,18 @@
         <style type="text/css">
             body{
                 font-family: monospace;
-                font-weight: bolder;
-                background-color: black;
-                background-image: url(https://www.latercera.com/resizer/S0c96pqg-Dk-N5hRRzYvbaz_fRQ=/arc-anglerfish-arc2-prod-copesa/public/WRDZLY2UIVGVZFZ6KQEH3IJBXU.jpg);
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url(https://i.blogs.es/7ffca2/dc-universo/1366_2000.jpeg);
             }
             p{
                 margin: 15px;
-                font-family: fantasy;
-                font-size: larger;
+                
             }
             table{
-                background-color: rgba(105, 34, 67, 0.652);
+                background-color: rgba(167, 53, 255, 1);
                 height: 1200px;
                 border: 3px solid black;
                 border-radius: 12px;
@@ -28,25 +29,31 @@
                 padding: 12px;
             }
             tr{
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid #1d1d1d;
             }
             td{
                 border-radius: 12px;
+                font-weight: bold;
+                font-style: italic;
+                font-size: x-large;
             }
             td:hover{
                 scale: 1.1;
                 transition: 0.3s ease-in;
-                background-color: rgb(189, 243, 184);
+                background-color: #35ffa7
     
             }
             th{
+                font-weight: bold;
+                font-size: 150%;
                 border: 3px solid black;
-                background-color: cadetblue;
+                background-color: #ffa735;
                 border-radius: 12px;
                 margin: 3px;
             }
             img{
-                height:250px;              
+                height:250px;    
+                width: 300px;          
             }
             img:hover{
                 opacity: 0.2; 
@@ -54,22 +61,31 @@
             }
             th:hover{
                 background-color: rgb(9, 126, 132);
+                color: white;
+                scale: 1.05;
+                transition: 1s cubic-bezier(1, 0, 0, 1);
             }
-            .nombreBatman{
-                font-weight: bold;
+            .nombres{
+                text-align: center;
+                color: #000000; 
+                opacity: 1;
+                transition: .5 ease;
+                font-family: Cocogoose;
+                border-right: 3px solid black;
+                border-bottom: 3px solid black;
             }
             #imgSuperman{
                 height: 250px;
                 background-size: cover;
                 background-color: black;
                 border-radius: 12px;
-                border: 3px solid white;
+
                 text-align: center;
                 background-image: url(https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg);
             }
             #imgBatman{
                 border-radius: 12px;
-                border: 3px solid white;
+                width: 300px;
                 text-align: center;
                 height: 250px;
                 background-size: cover;
@@ -77,7 +93,7 @@
             }
             #imgWonder{
                 border-radius: 12px;
-                border: 3px solid white;
+                margin: 3px;
                 text-align: center;
                 background-image: url(https://www.mubis.es/media/users/12828/318751/gal-gadot-confirma-el-desarrollo-de-una-nueva-pelicula-de-wonder-woman-original.jpg);
                 height: 250px;
@@ -85,50 +101,85 @@
             }
             #imgFlash{
                 border-radius: 12px;
-                border: 3px solid white;
+                width: 300px;
                 text-align: center;
                 background-image: url(//www.mundodeportivo.com/alfabeta/hero/2023/06/captura-de-pantalla-2023-06-06-175608.png);
                 height: 250px;
                 background-size: cover;
             }
+            .myButton {
+                box-shadow: 0px 1px 0px 0px #1c1b18;
+                background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+                background-color:#eae0c2;
+                border-radius:15px;
+                border:2px solid #333029;
+                display:inline-block;
+                cursor:pointer;
+                color:#505739;
+                font-family:Arial;
+                font-size:14px;
+                font-weight:bold;
+                padding:12px 16px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #ffffff;
+                text-align: center;
+            }
+            .myButton:hover {
+                background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+                background-color:#ccc2a6;
+            }
+            .myButton:active {
+                position:relative;
+                top:1px;
+            }
+            #columnaBoton{
+                text-align: center;
+            }
+            caption{
+                background-color: #35ffa7;
+                border-radius: 7px;
+                padding: 3px;
+                font-family: Cocogoose Pro;
+                font-size: larger;
+            }
         </style>
     </head>
     <body>
-        <p>Superheroes de DC</p>
         <table>
+            <caption>Superheroes de DC</caption>
             <tbody>
                 <tr>
-                    <th>Superheroe</th>
-                    <th>Poderes</th>
-                    <th>Imagen</th>
-                    <th>Biografía</th>
+                    <th class="header">Superheroe</th>
+                    <th class="header">Poderes</th>
+                    <th class="header">Imagen</th>
+                    <th class="header">Biografía</th>
                 </tr>
                 <tr>
-                    <td class="nombreBatman" rowspan="2">BATMAN</td>
+                    <td class="nombres" rowspan="2">BATMAN</td>
                     <td>Inteligencia, habilidades de detective, habilidades marciales</td>
-                    <td id="imgBatman" rowspan="2"><img src="https://hbomax-images.warnermediacdn.com/2022-04/batman_over_0.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt="Una imagen de Batman"></td>
-                    <td rowspan="2">Más sobre Batman</td>
+                    <td id="imgBatman" rowspan="2"></td>
+                    <td id="columnaBoton" rowspan="2"><a href="https://es.wikipedia.org/wiki/Batman" class="myButton">Pulse aquí para saber <br> más sobre Batman</a></td>
                 </tr>
                 <tr>
                     <td>Alias: El Caballero Oscuro</td>
                 </tr>
                 <tr>
-                    <td>SUPERMAN</td>
+                    <td class="nombres">SUPERMAN</td>
                     <td>Vuelo, super fuerza, visión de rayos X</td>
-                    <td id="imgSuperman"><img src="https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg" alt="Una imagen de Superman"></td>
-                    <td>Más sobre Superman</td>
+                    <td id="imgSuperman"></td>
+                    <td id="columnaBoton"><a href="https://es.wikipedia.org/wiki/Superman" class="myButton">Pulse aquí para saber <br> más sobre Superman</a></td>
                 </tr>
                 <tr>
-                    <td>WONDER <br> WOMAN </td>
+                    <td class="nombres">WONDER <br> WOMAN </td>
                     <td>Fuerza sobrehumana, habilidades de lucha, lazos de la verdad</td>
-                    <td id="imgWonder"><img src="https://www.mubis.es/media/users/12828/318751/gal-gadot-confirma-el-desarrollo-de-una-nueva-pelicula-de-wonder-woman-original.jpg" alt="Una imagen de Wonder Woman"></td>
-                    <td>Más sobre Wonder Woman</td>
+                    <td id="imgWonder"></td>
+                    <td id="columnaBoton"><a href="https://es.wikipedia.org/wiki/Mujer_Maravilla" class="myButton">Pulse aquí para saber más<br> sobre Wonder Woman</a></td>
                 </tr>
                 <tr>
-                    <td rowspan="2">FLASH</td>
+                    <td class="nombres" rowspan="2">FLASH</td>
                     <td>Velocidad sobrehumana, curvatura del tiempo</td>
-                    <td id="imgFlash" rowspan="2"><img src="https://www.mundodeportivo.com/alfabeta/hero/2023/06/captura-de-pantalla-2023-06-06-175608.png" alt="Una imagen de Flash"></td>
-                    <td rowspan="2">Más sobre Flash</td>
+                    <td id="imgFlash" rowspan="2"></td>
+                    <td id="columnaBoton" rowspan="2"><a href="https://es.wikipedia.org/wiki/Flash_(historieta)" class="myButton">Pulse aquí para saber <br> más sobre Flash</a></td>
                 </tr>
                 <tr>
                     <td>Miembro de la Liga de la Justicia</td>
