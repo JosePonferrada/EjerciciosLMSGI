@@ -7,14 +7,37 @@
         <meta name="description" content="En esta página web encotrarás mi tabla personalizada" />
         <meta name="author" content="Jose Manuel Ponferrada">
         <style type="text/css">
+            body{
+                font-family: monospace;
+                font-weight: bolder;
+                background-color: black;
+                background-image: url(https://www.latercera.com/resizer/S0c96pqg-Dk-N5hRRzYvbaz_fRQ=/arc-anglerfish-arc2-prod-copesa/public/WRDZLY2UIVGVZFZ6KQEH3IJBXU.jpg);
+            }
             p{
                 margin: 15px;
                 font-family: fantasy;
                 font-size: larger;
             }
+            table{
+                background-color: rgba(105, 34, 67, 0.652);
+                height: 1200px;
+                border: 3px solid black;
+                border-radius: 12px;
+            }
             table, th, td, tr{
                 padding: 12px;
-                width: 100%;
+            }
+            tr{
+                border-bottom: 1px solid #ddd;
+            }
+            td{
+                border-radius: 12px;
+            }
+            td:hover{
+                scale: 1.1;
+                transition: 0.3s ease-in;
+                background-color: rgb(189, 243, 184);
+    
             }
             th{
                 border: 3px solid black;
@@ -23,14 +46,50 @@
                 margin: 3px;
             }
             img{
-              height:250px;              
+                height:250px;              
             }
             img:hover{
-                opacity: 0.2;    
+                opacity: 0.2; 
+                transition: 500ms;   
             }
             th:hover{
                 background-color: rgb(9, 126, 132);
-                column-rule-color:bisque ;
+            }
+            .nombreBatman{
+                font-weight: bold;
+            }
+            #imgSuperman{
+                height: 250px;
+                background-size: cover;
+                background-color: black;
+                border-radius: 12px;
+                border: 3px solid white;
+                text-align: center;
+                background-image: url(https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg);
+            }
+            #imgBatman{
+                border-radius: 12px;
+                border: 3px solid white;
+                text-align: center;
+                height: 250px;
+                background-size: cover;
+                background-image: url(https://hbomax-images.warnermediacdn.com/2022-04/batman_over_0.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com);
+            }
+            #imgWonder{
+                border-radius: 12px;
+                border: 3px solid white;
+                text-align: center;
+                background-image: url(https://www.mubis.es/media/users/12828/318751/gal-gadot-confirma-el-desarrollo-de-una-nueva-pelicula-de-wonder-woman-original.jpg);
+                height: 250px;
+                background-size: cover;
+            }
+            #imgFlash{
+                border-radius: 12px;
+                border: 3px solid white;
+                text-align: center;
+                background-image: url(//www.mundodeportivo.com/alfabeta/hero/2023/06/captura-de-pantalla-2023-06-06-175608.png);
+                height: 250px;
+                background-size: cover;
             }
         </style>
     </head>
@@ -45,31 +104,31 @@
                     <th>Biografía</th>
                 </tr>
                 <tr>
-                    <td rowspan="2">Batman</td>
+                    <td class="nombreBatman" rowspan="2">BATMAN</td>
                     <td>Inteligencia, habilidades de detective, habilidades marciales</td>
-                    <td rowspan="2"><img src="https://hbomax-images.warnermediacdn.com/2022-04/batman_over_0.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt="Una imagen de Batman"></td>
-                    <td>Más sobre Batman</td>
+                    <td id="imgBatman" rowspan="2"><img src="https://hbomax-images.warnermediacdn.com/2022-04/batman_over_0.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt="Una imagen de Batman"></td>
+                    <td rowspan="2">Más sobre Batman</td>
                 </tr>
                 <tr>
                     <td>Alias: El Caballero Oscuro</td>
                 </tr>
                 <tr>
-                    <td>Superman</td>
+                    <td>SUPERMAN</td>
                     <td>Vuelo, super fuerza, visión de rayos X</td>
-                    <td><img src="https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg" alt="Una imagen de Superman"></td>
+                    <td id="imgSuperman"><img src="https://media.revistagq.com/photos/643ffd0043b7dde5906f2d7e/1:1/w_1079,h_1079,c_limit/904934.jpg" alt="Una imagen de Superman"></td>
                     <td>Más sobre Superman</td>
                 </tr>
                 <tr>
-                    <td>Wonder Woman</td>
+                    <td>WONDER <br> WOMAN </td>
                     <td>Fuerza sobrehumana, habilidades de lucha, lazos de la verdad</td>
-                    <td><img src="https://www.mubis.es/media/users/12828/318751/gal-gadot-confirma-el-desarrollo-de-una-nueva-pelicula-de-wonder-woman-original.jpg" alt="Una imagen de Wonder Woman"></td>
+                    <td id="imgWonder"><img src="https://www.mubis.es/media/users/12828/318751/gal-gadot-confirma-el-desarrollo-de-una-nueva-pelicula-de-wonder-woman-original.jpg" alt="Una imagen de Wonder Woman"></td>
                     <td>Más sobre Wonder Woman</td>
                 </tr>
                 <tr>
-                    <td rowspan="2">Flash</td>
+                    <td rowspan="2">FLASH</td>
                     <td>Velocidad sobrehumana, curvatura del tiempo</td>
-                    <td rowspan="2"><img src="https://www.mundodeportivo.com/alfabeta/hero/2023/06/captura-de-pantalla-2023-06-06-175608.png" alt="Una imagen de Flash"></td>
-                    <td>Más sobre Flash</td>
+                    <td id="imgFlash" rowspan="2"><img src="https://www.mundodeportivo.com/alfabeta/hero/2023/06/captura-de-pantalla-2023-06-06-175608.png" alt="Una imagen de Flash"></td>
+                    <td rowspan="2">Más sobre Flash</td>
                 </tr>
                 <tr>
                     <td>Miembro de la Liga de la Justicia</td>
