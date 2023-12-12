@@ -1,6 +1,42 @@
 body{
-    background-color: #000000;
+    
     background-color: #9494b3;
     background-color: #ffffff;
     background-color: #e10600;
+}
+.mainTopBar{
+    background-color: #e10600;
+}
+.mainDiv{
+    background-color: #9494b3;
+}
+.footer{
+    background-color: #000000;
+}
+.topTopBar{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+.bottomTopBar{
+    font-family: 'Titillium Web', sans-serif;    background-color: #000000;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 1320px;
+    margin: auto;
+    background-color: #ffffff;
+}
+.bottomHeaderList{
+    display: inline-block;
+    box-sizing: border-box;
+}
+.topHeaderList{
+    display: inline-block;
+    box-sizing: border-box;
+}
+.login{
+    display: inline-block;
+    align-content: right;
+}
+.titleLeftMainDiv{
+    font-family: F1 Bold;
 }
