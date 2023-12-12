@@ -5,10 +5,18 @@ body{
     background-color: #e10600;
 }
 .mainTopBar{
-    background-color: #e10600;
+    background-color: #9494b3;
+    display: table;
+    position: fixed;
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 0;
+    height: auto;
+    top: 0;
 }
 .mainDiv{
     background-color: #9494b3;
+    display: block;
 }
 .footer{
     background-color: #000000;
@@ -16,14 +24,26 @@ body{
 .topTopBar{
     font-family: 'Titillium Web', sans-serif;
     font-weight: 600;
+    background-color: #ffffff;
 }
 .bottomTopBar{
-    font-family: 'Titillium Web', sans-serif;    background-color: #000000;
+    display: table-footer-group;
+    font-family: 'Titillium Web', sans-serif;
     font-style: italic;
     font-weight: 300;
     max-width: 1320px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: #e10600;
+}
+.f1Logo{
+    display: inline-block;
+    text-align: left;
+}
+.f1Logo a{
+    display: inline-block;
+}
+.a{
+    cursor: pointer;
 }
 .bottomHeaderList{
     display: inline-block;
@@ -35,8 +55,45 @@ body{
 }
 .login{
     display: inline-block;
-    align-content: right;
+    
+    text-align: right;
 }
 .titleLeftMainDiv{
     font-family: F1 Bold;
+}
+.leftMainDiv{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.rightMainDiv{
+    max-width: 50%;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.colIMG{
+    display: block;
+}
+.col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+*{
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: 10px;
+}
+.rightRightMainDiv{
+
 }
