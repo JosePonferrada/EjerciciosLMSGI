@@ -7,7 +7,7 @@ body{
 .mainTopBar{
     background-color: #9494b3;
     display: table;
-    position: fixed;
+    position: sticky;
     width: 100%;
     padding-top: 0;
     margin-bottom: 0;
@@ -16,7 +16,7 @@ body{
 }
 .mainDiv{
     background-color: #9494b3;
-    display: block;
+    display: flex;
 }
 .footer{
     background-color: #000000;
@@ -27,7 +27,7 @@ body{
     background-color: #ffffff;
 }
 .bottomTopBar{
-    display: table-footer-group;
+    display: inline-block;
     font-family: 'Titillium Web', sans-serif;
     font-style: italic;
     font-weight: 300;
@@ -62,14 +62,14 @@ body{
     font-family: F1 Bold;
 }
 .leftMainDiv{
-    flex: 0 0 50%;
-    max-width: 50%;
+    width: 50%;
     height: 100%;
 }
 .rightMainDiv{
     max-width: 50%;
 }
 img{
+    position: relative;
     display: block;
     width: 100%;
     height: auto;
