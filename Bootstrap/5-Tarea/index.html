@@ -18,7 +18,7 @@
                 <div class="text-center py-4">
                     <img class="img-fluid" src="./images/bootstrap-2.png" alt="Logo Bootstrap">
                 </div>
-                <div class="text-center">
+                <div class="text-center pb-5">
                     <h1 class="fw-bold">Checkout form</h1>
                     <p>Below is an example form built entirely with Bootstrap's form control. Each required form group
                         has a validation state that can be triggered by attempting to submit the form without completing
@@ -69,9 +69,7 @@
                     <form class="card p-2">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Promo code">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-secondary">Redeem</button>
-                            </div>
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
                         </div>
                     </form>
                 </div>
@@ -83,7 +81,7 @@
                                 <label for="firstName">First name</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="" value=""
                                     required="">
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Valid first name is required.
                                 </div>
                             </div>
@@ -91,7 +89,7 @@
                                 <label for="lastName">Last name</label>
                                 <input type="text" class="form-control" id="lastName" placeholder="" value=""
                                     required="">
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Valid last name is required.
                                 </div>
                             </div>
@@ -100,12 +98,9 @@
                         <div class="mb-3">
                             <label for="username">Username</label>
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">@</span>
-                                </div>
-                                <input type="text" class="form-control" id="username" placeholder="Username"
-                                    required="">
-                                <div class="invalid-feedback" style="width: 100%;">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control rounded-end" id="username" placeholder="Username" required="">
+                                <div class="valid-feedback" style="width: 100%;">
                                     Your username is required.
                                 </div>
                             </div>
@@ -114,7 +109,7 @@
                         <div class="mb-3">
                             <label for="email">Email <span class="text-muted">(Optional)</span></label>
                             <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                            <div class="invalid-feedback">
+                            <div class="valid-feedback">
                                 Please enter a valid email address for shipping updates.
                             </div>
                         </div>
@@ -122,7 +117,7 @@
                         <div class="mb-3">
                             <label for="address">Address</label>
                             <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
-                            <div class="invalid-feedback">
+                            <div class="valid-feedback">
                                 Please enter your shipping address.
                             </div>
                         </div>
@@ -139,7 +134,7 @@
                                     <option value="">Choose...</option>
                                     <option>...</option>
                                 </select>
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Please select a valid country.
                                 </div>
                             </div>
@@ -149,14 +144,14 @@
                                     <option value="">Choose...</option>
                                     <option>...</option>
                                 </select>
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Please provide a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="zip">Zip</label>
                                 <input type="text" class="form-control" id="zip" placeholder="" required="">
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Zip code required.
                                 </div>
                             </div>
@@ -198,14 +193,14 @@
                                 <label for="cc-name">Name on card</label>
                                 <input type="text" class="form-control" id="cc-name" placeholder="" required="">
                                 <div class="text-muted">Full name as displayed on card</div>
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Name on card is required
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="cc-number">Credit card number</label>
                                 <input type="text" class="form-control" id="cc-number" placeholder="" required="">
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Credit card number is required
                                 </div>
                             </div>
@@ -214,14 +209,14 @@
                             <div class="col-md-3 mb-3">
                                 <label for="cc-expiration">Expiration</label>
                                 <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Expiration date required
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="cc-cvv">CVV</label>
                                 <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
-                                <div class="invalid-feedback">
+                                <div class="valid-feedback">
                                     Security code required
                                 </div>
                             </div>

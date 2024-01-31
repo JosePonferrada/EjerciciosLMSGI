@@ -1,3 +1,16 @@
+.textoApartado {
+  font-weight: bold;
+  color: black;
+}
+
+.carrito {
+  color: grey;
+}
+
+.descuento {
+  color: green;
+}
+
 img {
   width: 100px;
   padding: 5px;
