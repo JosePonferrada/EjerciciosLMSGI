@@ -7,3 +7,11 @@ img{
     width: $width;
     padding: $padding-img;
 }
+
+#checkoutButton{
+    background-color: $color-checkout;
+}
+
+#checkoutButton:hover{
+    background-color: #0b5ed7;
+}
