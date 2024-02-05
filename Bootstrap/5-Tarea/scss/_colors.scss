@@ -1,5 +1,5 @@
-@mixin discountCode {
-    color: green;
+@mixin discountCode($color-discount) {
+    
 }
 
 @mixin textoNegritaApartados{
@@ -22,3 +22,8 @@
 .descuento{
     @include discountCode;
 }
+
+$color-discount: green;
+$color-carrito: grey;
+$color-texto: black;
+$color-bg-pagina: rgb(236, 236, 236);
