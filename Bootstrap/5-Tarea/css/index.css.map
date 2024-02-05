@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/index.scss"],"names":[],"mappings":"AAgBA;EARI;EACA;;;AAWJ;EAPI;;;AAWJ;EApBI;;;AAwBJ;EACI,OA7BI;EA8BJ,SA7BU","file":"index.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/_colors.scss","../scss/index.scss"],"names":[],"mappings":"AAaA;EARI;EACA;;;AAWJ;EAPI;;;AAWJ;EApBI;;;ACIJ;EACI,OAJI;EAKJ,SAJU","file":"index.css"}
