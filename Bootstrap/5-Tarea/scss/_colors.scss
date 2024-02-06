@@ -1,28 +1,3 @@
-@mixin discountCode($color-discount) {
-    color: $color-discount;
-}
-
-@mixin textoNegritaApartados($color-texto) {
-    font-weight: bold;
-    color: $color-texto;
-}
-
-@mixin tuCarrito($color-carrito){
-    color: $color-carrito;
-}
-
-.textoApartado{
-    @include textoNegritaApartados(black);
-}
-
-.carrito{
-    @include tuCarrito(grey);
-}
-
-.descuento{
-    @include discountCode(green);
-}
-
 $color-discount: green;
 $color-carrito: grey;
 $color-texto: black;

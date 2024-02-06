@@ -1,0 +1,27 @@
+img {
+  width: 100px;
+  padding: 5px;
+}
+
+#checkoutButton {
+  background-color: #0d6efd;
+}
+
+#checkoutButton:hover {
+  background-color: #0b5ed7;
+}
+
+.textoApartado {
+  font-weight: bold;
+  color: black;
+}
+
+.carrito {
+  color: grey;
+}
+
+.descuento {
+  color: green;
+}
+
+/*# sourceMappingURL=index.css.map */
