@@ -1,0 +1,7 @@
+.nav-link {
+    color: #000000; /* Color del texto */
+}
+
+.nav-link:hover {
+    background-color: #ced4da; /* Cambia el color de fondo al pasar el ratón */
+}
