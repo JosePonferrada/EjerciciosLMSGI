@@ -1,44 +1,22 @@
 @import "_colors.scss";
 
-$width: 100px;
-$padding-img: 5px;
-
-img{
-    width: $width;
-    padding: $padding-img;
-}
-
-#checkoutButton{
-    background-color: $color-checkout;
-}
-
-#checkoutButton:hover{
-    background-color: #0b5ed7;
-}
-
-@mixin discountCode($color-discount) {
-    color: $color-discount;
-}
-
-@mixin textoNegritaApartados($color-texto) {
-    font-weight: bold;
+#botonAzul{
+    background-color: $color-boton;
     color: $color-texto;
 }
 
-@mixin tuCarrito($color-carrito){
-    color: $color-carrito;
+@mixin textosEnNegrita($color-texto-negrita, $tamanio) {
+    color: $color-texto-negrita;
+    font-size: $tamanio;
 }
 
-.textoApartado{
-    @include textoNegritaApartados(black);
+
+#textoMixin1{
+    @include textosEnNegrita(rgb(250, 250, 250), 26px)
 }
 
-.carrito{
-    @include tuCarrito(grey);
-}
-
-.descuento{
-    @include discountCode(green);
+#textoMixin2{
+    @include textosEnNegrita(rgb(8, 8, 8), 20px)
 }
 
 #body{
