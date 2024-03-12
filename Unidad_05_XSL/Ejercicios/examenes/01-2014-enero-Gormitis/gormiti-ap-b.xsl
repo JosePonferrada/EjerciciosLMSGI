@@ -9,7 +9,7 @@
       </head>
       <body>
         <h1>Gormitis</h1>
-        <table border="1" with="60%" align="center">
+        <table border="1" width="60%" align="center" style="background: url('') no-repeat">
 	        <xsl:call-template name="bucleForFila">
 	        	<xsl:with-param name="i">0</xsl:with-param>
 	        </xsl:call-template>
@@ -61,12 +61,25 @@
   		<xsl:for-each select="/gormitis/tablero/gormitiEnMapa">
   			<xsl:if test="@x = $x and @y = $y">
           <xsl:value-of select="@tribu"/>
+  			  <xsl:call-template name="imagenEnCelda">
+  			    <xsl:with-param name="tribu">
+  			      <xsl:value-of select="@tribu"/>
+  			    </xsl:with-param>
+  			  </xsl:call-template>
   			</xsl:if>
   		</xsl:for-each>
   	</td>
   </xsl:template>
 
 
+  <xsl:template name="imagenEnCelda">
+    <xsl:param name="tribu"/>
+    <xsl:for-each select="/gormitis/gormiti">
+      <xsl:if test="$tribu = @tribu">
+        <img src="{.}"></img>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
 
 
 
