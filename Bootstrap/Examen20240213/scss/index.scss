@@ -1,0 +1,24 @@
+@import "_colors.scss";
+
+#botonAzul{
+    background-color: $color-boton;
+    color: $color-texto;
+}
+
+@mixin textosEnNegrita($color-texto-negrita, $tamanio) {
+    color: $color-texto-negrita;
+    font-size: $tamanio;
+}
+
+
+#textoMixin1{
+    @include textosEnNegrita(rgb(250, 250, 250), 26px)
+}
+
+#textoMixin2{
+    @include textosEnNegrita(rgb(8, 8, 8), 20px)
+}
+
+#body{
+    background-color: $color-bg-pagina;
+}
