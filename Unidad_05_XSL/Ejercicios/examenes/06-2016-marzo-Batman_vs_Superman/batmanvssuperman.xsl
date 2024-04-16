@@ -11,118 +11,16 @@
         </style></head>
       <body>
         
-        <div style="width: 1000px; margin: 0 auto;">
+        <div style="width: 1000px; margin: 0 auto;" align="center">
           
            <xsl:apply-templates select="titulo"></xsl:apply-templates>
           
           <xsl:apply-templates select="sesiones"></xsl:apply-templates>
           
-            <table border="1" width="100%">
-              <tr>
-                <td align="center" style="background:#dbf7ff;">
-                  Sesión:
-                  1
-                  - Hora:
-                  16:30
-                  <table border="1" width="50%" align="center">
-                    <tr>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <tr>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                        <tr>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <tr>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          </tr>
-                        </tr>
-                      </tr>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="background:&#xA;                #FFFFFF&#xA;              ;">
-                  Sesión:
-                  2
-                  - Hora:
-                  18:30
-                  <table border="1" width="50%" align="center">
-                    <tr>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <tr>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <tr>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <tr>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          </tr>
-                        </tr>
-                      </tr>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td align="center" style="background:#dbf7ff;">
-                  Sesión:
-                  3
-                  - Hora:
-                  20:30
-                  <table border="1" width="50%" align="center">
-                    <tr>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                      <tr>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                        <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                        <tr>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          <tr>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/ocupado.png"/></td>
-                            <td align="center"><img src="http://www.webdidacticarafaelmunoz.appspot.com/lmsgi/image/batmanvssumperman/libre.png"/></td>
-                          </tr>
-                        </tr>
-                      </tr>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
+          <xsl:apply-templates select="cartelera"></xsl:apply-templates>
+          
+   
         </div>
-        
       </body>
     </html>
   </xsl:template>
@@ -131,12 +29,29 @@
   <!-- Template ap-b -->
   
   <xsl:template match="titulo">
-    <h1><xsl:value-of select="@nombre"/></h1>
+    <h1>
+      <xsl:value-of select="@nombre"/>
+    </h1>
     <img src="{imagen/.}" width="500px"/>
     <h2><xsl:value-of select="@nombre"/></h2>
     <h3><xsl:value-of select="@estreno"/></h3>
     <p></p>
   </xsl:template>  
+  
+  <xsl:template match="cartelera">
+    <h1>Cartelera</h1>
+    <xsl:for-each select="pelicula">
+      <div class="card">
+        <xsl:variable name="titulo"><xsl:value-of select="@id"/></xsl:variable>
+        <img src="{/cine/imagenes/imagen[$titulo = @id]}" style="width:5%"/>
+          <div class="container">
+            <h4><b><xsl:value-of select="@id"/></b></h4>
+            <p></p>
+          </div>
+      </div> 
+    </xsl:for-each>
+   
+  </xsl:template>
   
   
   <xsl:template match="sesiones">
@@ -148,6 +63,13 @@
               <xsl:attribute name="style">background: #dbf7ff;</xsl:attribute>
             </xsl:if>
             Sesión <xsl:value-of select="position()"/>: <xsl:value-of select="@hora"/>
+            <!--  <tr> -->
+              <table border="1" width="50%" align="center">          
+                <xsl:call-template name="asientos"/>  
+              </table>
+              <!--    </tr> -->
+            
+            
           </td>
         </tr>  
       </xsl:for-each>
@@ -155,6 +77,62 @@
     </table>
   </xsl:template>
   
+  <xsl:template name="asientos">
+    
+      <xsl:for-each select=".">
+        <xsl:call-template name="bucleForFila">
+          <xsl:with-param name="i">1</xsl:with-param>
+        </xsl:call-template>  
+      </xsl:for-each>
+      
+  </xsl:template>
+  
+  <xsl:template name="bucleForFila">
+    <xsl:param name="i"/>
+    <xsl:if test="$i &lt;= 4">
+      <tr>
+        <xsl:call-template name="bucleForColumna">
+          <xsl:with-param name="i"><xsl:value-of select="$i"/></xsl:with-param>
+          <xsl:with-param name="j">1</xsl:with-param>
+        </xsl:call-template>
+      </tr>
+      <xsl:call-template name="bucleForFila">
+        <xsl:with-param name="i"><xsl:value-of select="$i + 1"/></xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+  
+  
+  <xsl:template name="bucleForColumna">
+    <xsl:param name="i"/>
+    <xsl:param name="j"/> 
+    <xsl:if test="$j &lt;= 4">
+      <xsl:call-template name="celda">
+        <xsl:with-param name="x"><xsl:value-of select="$j"/></xsl:with-param>
+        <xsl:with-param name="y"><xsl:value-of select="$i"/></xsl:with-param>
+      </xsl:call-template>
+      <xsl:call-template name="bucleForColumna">
+        <xsl:with-param name="i"><xsl:value-of select="$i"/></xsl:with-param>
+        <xsl:with-param name="j"><xsl:value-of select="$j + 1"/></xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+  
+  
+  <xsl:template name="celda">
+    <xsl:param name="x"/>
+    <xsl:param name="y"/>
+    <td align="center">
+      <xsl:choose>
+        <xsl:when test="ocupado[$x = @asiento and $y = @fila]">
+          <img src="{/cine/imagenes/imagen[@id = 'ocupado']}"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <img src="{/cine/imagenes/imagen[@id = 'libre']}"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </td>
+  </xsl:template>
   
   <xsl:template name="css">
     
@@ -163,6 +141,16 @@
     font-size: 12px;
     }
     
+    img:hover {
+    opacity: 0.8;
+    scale: 1.1;
+    
+    }
+    
+    h1,h2,h3 {
+    text-align: center;
+    }
+       
     
   </xsl:template>
   

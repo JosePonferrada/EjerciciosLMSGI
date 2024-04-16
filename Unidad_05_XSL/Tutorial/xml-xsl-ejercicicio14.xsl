@@ -10,9 +10,8 @@
       <body>
         <h1>Superhéroes de Marvel</h1>
         <table border="1" with="90%">
-	        <xsl:call-template name="bucleForFila">
-	        	<xsl:with-param name="i">1</xsl:with-param>
-	        </xsl:call-template>
+	        <xsl:call-template name="bucleForFila"/>
+	        
         </table>
         
       </body>
