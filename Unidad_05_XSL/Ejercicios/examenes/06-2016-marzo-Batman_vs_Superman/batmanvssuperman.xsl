@@ -45,6 +45,7 @@
         <xsl:variable name="titulo"><xsl:value-of select="@id"/></xsl:variable>
         <img src="{/cine/imagenes/imagen[$titulo = @id]}" style="width:5%"/>
           <div class="container">
+            <p></p>
             <h4><b><xsl:value-of select="@id"/></b></h4>
             <p></p>
           </div>
@@ -149,6 +150,19 @@
     
     h1,h2,h3 {
     text-align: center;
+    }
+    
+    .card {
+    display: flex;
+    justify-content: center;
+    align-items; center;
+    margin: 5px;
+    
+    }
+    
+    .container {
+    display: block;
+    margin: 5px;
     }
        
     
