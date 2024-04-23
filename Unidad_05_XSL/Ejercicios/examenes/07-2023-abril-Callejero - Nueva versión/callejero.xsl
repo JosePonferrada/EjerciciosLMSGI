@@ -18,22 +18,14 @@
           <img src="{imagen}"></img>
         </h1>
         
-        <table>
-          <tr>
-            <td>Monumento</td>
-            <td>Imagen</td>
-            <td>Calle</td>
-            <td>Calles anexas</td>  
-          </tr>
-          <xsl:for-each select="monumentos/monumento">
-            <tr>
-              <td><xsl:value-of select="@nombre"/></td>
-            </tr>
-          </xsl:for-each>
-          
-        </table>
-          
+                 
         <xsl:apply-templates select="monumentos"></xsl:apply-templates>       
+        
+        <table border="1" width="30%" align="center" style="background: url('{/callejero/imagen/.}') no-repeat;">
+          <xsl:call-template name="bucleForFila">
+            <xsl:with-param name="i">1</xsl:with-param>
+          </xsl:call-template>
+        </table>
    
       </body>
     </html>
@@ -90,19 +82,20 @@
     </table>
   </xsl:template>
   
-  <xsl:template name="asientos">
-    
-      <xsl:for-each select=".">
+  <xsl:template match="Imagenes">
+    <table border="1" width="60%" align="center">
+      <xsl:attribute name="style">background: url(<xsl:value-of select="../imagen"/>) no-repeat;</xsl:attribute>
+      <!-- <xsl:for-each select="imagen"> -->
         <xsl:call-template name="bucleForFila">
           <xsl:with-param name="i">1</xsl:with-param>
         </xsl:call-template>  
-      </xsl:for-each>
-      
+      <!--  </xsl:for-each> -->
+    </table>
   </xsl:template>
   
   <xsl:template name="bucleForFila">
     <xsl:param name="i"/>
-    <xsl:if test="$i &lt;= 4">
+    <xsl:if test="$i &lt;= 6">
       <tr>
         <xsl:call-template name="bucleForColumna">
           <xsl:with-param name="i"><xsl:value-of select="$i"/></xsl:with-param>
@@ -119,7 +112,7 @@
   <xsl:template name="bucleForColumna">
     <xsl:param name="i"/>
     <xsl:param name="j"/> 
-    <xsl:if test="$j &lt;= 4">
+    <xsl:if test="$j &lt;= 6">
       <xsl:call-template name="celda">
         <xsl:with-param name="x"><xsl:value-of select="$j"/></xsl:with-param>
         <xsl:with-param name="y"><xsl:value-of select="$i"/></xsl:with-param>
@@ -135,15 +128,13 @@
   <xsl:template name="celda">
     <xsl:param name="x"/>
     <xsl:param name="y"/>
-    <td align="center">
-      <xsl:choose>
-        <xsl:when test="ocupado[$x = @asiento and $y = @fila]">
-          <img src="{/cine/imagenes/imagen[@id = 'ocupado']}"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <img src="{/cine/imagenes/imagen[@id = 'libre']}"/>
-        </xsl:otherwise>
-      </xsl:choose>
+    <td width="50px" height="50px" align="center">
+      <xsl:for-each select="/callejero/monumentos/monumento">
+        <xsl:if test="coordX/. = $y and coordY/. = $x">
+          <xsl:variable name="imagenMonumento"><xsl:value-of select="@imagen"/></xsl:variable>
+          <img src="{/callejero/Imagenes/imagen[@id = $imagenMonumento]}"></img>
+        </xsl:if>
+      </xsl:for-each>
     </td>
   </xsl:template>
   

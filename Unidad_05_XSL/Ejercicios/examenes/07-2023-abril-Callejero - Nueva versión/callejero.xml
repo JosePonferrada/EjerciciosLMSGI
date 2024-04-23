@@ -13,7 +13,7 @@
             <coordY>1</coordY>
         </monumento>
         <monumento imagen="monumento2" nombre="Castillo" calle="Alta y baja">
-            <coordX>4</coordX>
+            <coordX>5</coordX>
             <coordY>5</coordY>
         </monumento>
         <monumento imagen="monumento3" nombre="San Mateo" calle="San Miguel">
