@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="videoclub_solucion.xsl" ?>
+<?xml-stylesheet type="text/xsl" href="videoclub.xsl" ?>
 <videoclub nombre="VideoAlquiler Muñoz">
     <videojuegos>
         <videoJuego order="4" plataforma="XBox One" alquilerDiario="1.5 €" pegi="18" x="5" y="1">Assasins Creed
