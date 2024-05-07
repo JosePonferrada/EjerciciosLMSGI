@@ -1,6 +1,2 @@
-<marvel> {
-  for $superheroe in doc('superheroes.xml')/marvel/superheroe
-  where contains(lower-case($superheroe/@poderes), 'fuerza')
-  and contains($superheroe/@amigos, 'Iron Man')
-  return <superheroe>{ ($superheroe) }</superheroe>
-  } </marvel>
+let $niveles  := doc('superheroes.xml')/marvel/superheroe/@nivel/xs:double(.)
+return <media>La media de nivel de todos los superheroes es { avg($niveles) }</media>
